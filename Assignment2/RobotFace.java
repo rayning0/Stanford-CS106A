@@ -5,7 +5,7 @@
 import acm.graphics.*;
 import acm.program.*;
 import java.awt.*;
-import java.lang.Math;
+import acm.util.*;	//get RandomGenerator
 
 public class RobotFace extends GraphicsProgram {	
 	
@@ -15,6 +15,7 @@ public class RobotFace extends GraphicsProgram {
 	private static final int HEAD_WIDTH = 250, HEAD_HEIGHT = 350;
 	private static final int EYE_RADIUS = 27;
 	private static final int MOUTH_WIDTH = 140, MOUTH_HEIGHT = 55;
+	private RandomGenerator rgen = new RandomGenerator();	//create generator for random numbers
 	
 	public void run() {
 		double scr_w = getWidth();	//window width
@@ -43,7 +44,7 @@ public class RobotFace extends GraphicsProgram {
 		//randomly jiggle face around screen
 		while (face.getY() < scr_h && face.getX() < scr_w) {
 			pause(40); // pause 40 ms to display proper frame rate
-			face.move(Math.random() * 10 - 5, Math.random() * 10 - 5);			
+			face.move(rgen.nextInt(-5, 5), rgen.nextInt(-5, 5)); //move random x, y values between (+/-5, +/-5)		
 		}
 	}
 	
