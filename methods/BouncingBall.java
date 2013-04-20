@@ -1,7 +1,7 @@
 /**
  * 
- * This program graphically simulates a bouncing ball. 
- *
+ * This program graphically simulates a bouncing ball. I made a QuickTime video showing it moving.
+ * You can hear me talking too! Watch video called "bouncingball.mov" in my GitHub repository.
  */
 
 import acm.program.*;
